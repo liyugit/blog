@@ -1,13 +1,4 @@
-<style>
-.reveal h1, .reveal h2, .reveal h3 {
-    margin-bottom: 1em;
-}
-.reveal p {
-    margin-bottom: 0.5em;
-}
-</style>
-
-<h1 class="tag-microsharing">Android中的长度单位</h1>
+##Android中的长度单位(转自赵文博)
 
 ----------
 
