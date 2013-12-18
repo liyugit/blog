@@ -33,7 +33,8 @@ $rest = substr ("abcdef", -2); // returns "ef"
 
 $rest = substr ("abcdef", -3, 1); // returns "d" 
 
-?> ...
+?> 
+...
 
 ###但是substr截断，有对中英混排的情况，出现截取半个字符导致乱码的问题
 
