@@ -1,17 +1,17 @@
 ##Android中的长度单位(转自赵文博)
-## <strong style="color:#f44;font-family:Georgia">3</strong>种长度单位：
+### <strong style="color:#f44;font-family:Georgia">3</strong>种长度单位：
+#### 物理长度
+#### 屏幕像素
+#### 相对长度
 ### 物理长度
-### 屏幕像素
-### 相对长度
-## 物理长度
-## mm
+### mm
 <p class="fragment">millimeter，毫米。</p>
 <p class="fragment">成年人食指平均宽度为<em>16mm</em>。</p>
-## in
+### in
 <p class="fragment">inch，英寸。</p>
 <p class="fragment">iPhone 5屏幕对角线长度为<em>5in</em>。</p>
 
-## pt
+### pt
 <p class="fragment">point，点、磅。</p>
 <p class="fragment"><em>1/72</em>英寸。一张A4纸宽度为<em>595pt</em>。</p>
 
@@ -25,9 +25,9 @@
     </style>
 </section>
 
-## 屏幕像素
+### 屏幕像素
 
-## px
+### px
 <p class="fragment">对应显示屏的物理分辨率</p>
 <p class="fragment"><em>4.4</em>英寸的HTC Magic分辨率为<em>320 X 480</em></p>
 <p class="fragment"><em>4.7</em>英寸的HTC One分辨率为<em>1920 X 1080</em></p>
@@ -41,9 +41,9 @@
     <h2>不要使用px做单位！</h2>
 </section>
 
-## 相对单位
+### 相对单位
 
-## dp
+### dp
 <p class="fragment">Density-independent Pixels</p>
 <p class="fragment">一个<em>抽象</em>的长度单位</p>
 <p class="fragment">在<em>160dpi</em>的屏幕上，1dp等于1px</p>
@@ -53,7 +53,7 @@
     <h2>推荐使用dp做单位！</h2>
 </section>
 
-## sp
+### sp
 <p class="fragment">Scale-independent Pixels</p>
 <p class="fragment">和dp相同，除非...</p>
 
@@ -65,7 +65,7 @@
     <h2>设置字体大小时请使用sp做单位！</h2>
 </section>
 
-## <del>QA</del>
+### <del>QA</del>
 #&nbsp;
 <h4 class="fragment">因为每个人都听懂了</h4>
 
