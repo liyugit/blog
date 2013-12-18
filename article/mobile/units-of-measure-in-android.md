@@ -1,16 +1,12 @@
 ##Android中的长度单位(转自赵文博)
-
 ## <strong style="color:#f44;font-family:Georgia">3</strong>种长度单位：
 ### 物理长度
 ### 屏幕像素
 ### 相对长度
-
 ## 物理长度
-
 ## mm
 <p class="fragment">millimeter，毫米。</p>
 <p class="fragment">成年人食指平均宽度为<em>16mm</em>。</p>
-
 ## in
 <p class="fragment">inch，英寸。</p>
 <p class="fragment">iPhone 5屏幕对角线长度为<em>5in</em>。</p>
