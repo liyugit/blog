@@ -2,8 +2,9 @@
 	"docs"      : {
 		"关于我的博客": "README.md",
 		"PHP": "article/PHP",
-		"移动": "article/mobile",
-		"JavaScript": "article/javaScript",
+		//"移动": "article/mobile",
+		"前端技术": "article/javaScript",
+		"工具类":"article/tools",
 		"生活点滴": "article/life"
 	},	
 	"perpage"   : 5,
