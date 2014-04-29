@@ -7,7 +7,7 @@
 
 ```svn copy -m "页面改版" https://localhost/game/trunk/  https://localhost/game/branches/mod_page
 
-###在-m后面加上注释是很好的习惯，方便结合svn log 命令很快找到版本号之类的信息。```
+在-m后面加上注释是很好的习惯，方便结合svn log 命令很快找到版本号之类的信息。```
 
 
 ```svn co https://localhost/game/branches/mod_page```
@@ -78,7 +78,9 @@ svn revert用法如下：
 
 (2)改动已经提交，回滚到历史版本
 
- 当前的最新版本号28，回滚到25，如果想要更详细的了解情况，可以使用svn diff -r 28:25 [something]
+当前的最新版本号28，回滚到25，如果想要更详细的了解情况，可以使用
+ 
+ ```svn diff -r 28:25 [something]```
  
  回滚到版本号25：
        
