@@ -1,11 +1,13 @@
 ##svn 分支开发与合并
 ###创建分支
 
-比如，你现在负责一个项目，svn的主干目录地址为:https://localhost/game/trunk/,现在有一个页面改版的需求，项目名mod_page，开始吧
+比如，你现在负责一个项目，svn的主干目录地址为:https://localhost/game/trunk/,
 
-```svn copy -m "页面改版" https://localhost/game/trunk/  https://localhost/game/branches/mod_page```
+现在有一个页面改版的需求，创建一个叫mod_page的分支
 
-创建了一个叫mod_page的分支，在-m后面加上注释是很好的习惯，方便结合svn log 命令很快找到版本号之类的信息。
+```svn copy -m "页面改版" https://localhost/game/trunk/  https://localhost/game/branches/mod_page
+
+###在-m后面加上注释是很好的习惯，方便结合svn log 命令很快找到版本号之类的信息。```
 
 
 ```svn co https://localhost/game/branches/mod_page```
