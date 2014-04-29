@@ -5,9 +5,9 @@
 
 现在有一个页面改版的需求，创建一个叫mod_page的分支
 
-```svn copy -m "页面改版" https://localhost/game/trunk/  https://localhost/game/branches/mod_page
+```svn copy -m "页面改版" https://localhost/game/trunk/  https://localhost/game/branches/mod_page```
 
-在-m后面加上注释是很好的习惯，方便结合svn log 命令很快找到版本号之类的信息。```
+在-m后面加上注释是很好的习惯，方便结合svn log 命令很快找到版本号之类的信息。
 
 
 ```svn co https://localhost/game/branches/mod_page```
