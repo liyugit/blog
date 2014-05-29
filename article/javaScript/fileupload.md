@@ -108,11 +108,23 @@ var_dump($_FILES);
 ###服务器返回结果
 
 
+###代码中值得学习的地方，有兴趣可以读源码
+
+####对于html5，和falsh两种实现方式保持统一的接口
+
+####自定义事件，消息机制，降低耦合
+
+####grunt的使用
 
 
 ##链接
 
-gitpress博客用法：<http://blog.silverna.org/~posts/gitpress/2013-11-17-gitpress.org%20%E5%9F%BA%E4%BA%8Egithub%E7%9A%84%E6%87%92%E4%BA%BA%E5%8D%9A%E5%AE%A2%E7%B3%BB%E7%BB%9F.md>
-webuploader官网：<http://fex.baidu.com/webuploader>
-webuploader git:<https://github.com/fex-team/webuploader>
-XMLHttpRequest 2.0的家臣们<http://www.zhangxinxu.com/wordpress/2013/10/understand-domstring-document-formdata-blob-file-arraybuffer/>
+[gitpress博客用法](http://blog.silverna.org/~posts/gitpress/2013-11-17-gitpress.org%20%E5%9F%BA%E4%BA%8Egithub%E7%9A%84%E6%87%92%E4%BA%BA%E5%8D%9A%E5%AE%A2%E7%B3%BB%E7%BB%9F.md)
+
+[webuploader官网](http://fex.baidu.com/webuploader)
+
+[webuploader git](https://github.com/fex-team/webuploader)
+
+[XMLHttpRequest 2.0的家臣们](http://www.zhangxinxu.com/wordpress/2013/10/understand-domstring-document-formdata-blob-file-arraybuffer/)
+
+[grunt的中文网站](http://www.gruntjs.net/)
