@@ -10,7 +10,9 @@
 
 ### 文件对象的获取方式
 
-####监听file表单的change事件
+
+####(1)监听file表单的change事件
+
 
 ```html
 <input type="file"  id="upload" multiple="multiple" accept="image/gif, image/jpeg"/>
@@ -27,7 +29,10 @@ var upload = $("#upload");
 	});
 ```
 
-####拖拽，监听dom的drop事件，获取event的dataTransfer.files
+
+
+####(2)拖拽，监听dom的drop事件，获取event的dataTransfer.files
+
 
 ```html
 <div class="drag-file-c">
@@ -47,7 +52,10 @@ dragContainer.on("drop",function(e){
 	});
 ```
 
-####从剪切板获取,监听paster事件，获取clipboardData
+
+
+####(3)从剪切板获取,监听paster事件，获取clipboardData
+
 
 ```html
 <div class="paste-file-c">
@@ -71,3 +79,13 @@ pasteContainer.on("paste",function(e){
 	e.stopPropagation();
 });
 ```
+
+####(4)flash文件上传，不支持html5的浏览器的处理方式
+
+
+flash在这个过程中的扮演中转的角色：
+
+![Alt flash](./img/js_flash.png)
+
+
+
