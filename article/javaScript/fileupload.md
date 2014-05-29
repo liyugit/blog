@@ -12,8 +12,10 @@
 
 ####监听file表单的change事件
 
+```html
+<input type="file"  id="upload" multiple="multiple" accept="image/gif, image/jpeg"/>
 ```
-<input type="file" name="upfile" id="upload" multiple="multiple" accept="image/gif, image/jpeg"/>
+```js
 var upload = $("#upload");
 	upload.on("change",function (e) {
 		var files = upload[0].files,
@@ -27,10 +29,12 @@ var upload = $("#upload");
 
 ####拖拽，监听dom的drop事件，获取event的dataTransfer.files
 
-```
+```html
 <div class="drag-file-c">
 	拖放文件到这里
 </div>
+```
+```js
 var dragContainer = $(".drag-file-c");
 dragContainer.on("drop",function(e){
 		event.preventDefault();
@@ -45,10 +49,12 @@ dragContainer.on("drop",function(e){
 
 ####从剪切板获取,监听paster事件，获取clipboardData
 
-```
+```html
 <div class="paste-file-c">
 	复制文件到这里
 </div>
+```
+```js
 var pasteContainer = $(".paste-file-c");
 pasteContainer.on("paste",function(e){
 	var e = e.originalEvent || event,
