@@ -85,7 +85,7 @@ pasteContainer.on("paste",function(e){
 
 flash在这个过程中的扮演中转的角色：
 
-![Alt flash](./img/js_flash.png)
+![Alt flash](https://raw.githubusercontent.com/liyugit/blog/master/article/javaScript/img/js_flash.png)
 
 
 
