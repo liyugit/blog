@@ -1,8 +1,16 @@
-##文件上传
+##异步文件上传（百度fex webuploader分析）
 
-### 文件上传的方式
+###上传的3部曲
 
-####传统
+1.获取文件对象
+
+2.post文件对象到服务器
+
+3.返回上传是否成功
+
+### 文件对象的获取方式
+
+####监听file表单的change事件
 
 ```
 <input type="file" name="upfile" id="upload" multiple="multiple" accept="image/gif, image/jpeg"/>
@@ -17,7 +25,7 @@ var upload = $("#upload");
 	});
 ```
 
-####拖拽
+####拖拽，监听dom的drop事件，获取event的dataTransfer.files
 
 ```
 <div class="drag-file-c">
@@ -35,7 +43,7 @@ dragContainer.on("drop",function(e){
 	});
 ```
 
-####从剪切板获取
+####从剪切板获取,监听paster事件，获取clipboardData
 
 ```
 <div class="paste-file-c">
