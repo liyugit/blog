@@ -85,7 +85,34 @@ pasteContainer.on("paste",function(e){
 
 flash在这个过程中的扮演中转的角色：
 
+
 ![Alt flash](https://raw.githubusercontent.com/liyugit/blog/master/article/javaScript/img/js_flash.png)
 
+###post文件对象到服务器
+
+####(1)formdata + ajax
 
 
+####(2)flash上传
+
+
+####php代码，好像很短。。
+
+```php
+
+var_dump($_FILES);
+
+```
+
+
+###服务器返回结果
+
+
+
+
+##链接
+
+gitpress博客用法：<http://blog.silverna.org/~posts/gitpress/2013-11-17-gitpress.org%20%E5%9F%BA%E4%BA%8Egithub%E7%9A%84%E6%87%92%E4%BA%BA%E5%8D%9A%E5%AE%A2%E7%B3%BB%E7%BB%9F.md>
+webuploader官网：<http://fex.baidu.com/webuploader>
+webuploader git:<https://github.com/fex-team/webuploader>
+XMLHttpRequest 2.0的家臣们<http://www.zhangxinxu.com/wordpress/2013/10/understand-domstring-document-formdata-blob-file-arraybuffer/>
