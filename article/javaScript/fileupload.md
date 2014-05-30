@@ -142,9 +142,9 @@ flash收到响应，调用js的方法，页面显示上传结果
 
 ####移动端使用webupload的坑（ququ赞助的内容）
 
-####[移动版的坑](https://github.com/fex-team/webuploader/issues/185)
+####移动版的坑:[https://github.com/fex-team/webuploader/issues/185](https://github.com/fex-team/webuploader/issues/185)
 
-####移动版用这个custom,[webuploader.custom.js](https://github.com/fex-team/webuploader/blob/master/dist/webuploader.custom.js)
+####移动版js,[webuploader.custom.js](https://github.com/fex-team/webuploader/blob/master/dist/webuploader.custom.js)
 
 ####移动设备上，iOS6+，Android4+ 才可以用，根据用户的机型数据，来决定是否用webupload。
 
