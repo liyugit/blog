@@ -1,6 +1,6 @@
 ##异步文件上传（百度fex webuploader分析）
 
-###上传的3部曲
+###上传的3个步骤：
 
 1.获取文件对象
 
@@ -83,39 +83,96 @@ pasteContainer.on("paste",function(e){
 ####(4)flash文件上传，不支持html5的浏览器的处理方式
 
 
-flash在这个过程中的扮演中转的角色：
+flash是业内通用的Uploader.swf，在这个过程中的扮演中转的角色：
 
 
 ![Alt flash](https://raw.githubusercontent.com/liyugit/blog/master/article/javaScript/img/js_flash.png)
 
+
 ###post文件对象到服务器
+
 
 ####(1)formdata + ajax
 
+```js
 
-####(2)flash上传
+var formData = new FormData();//定义formdata
+formData.append( "filename", file);//文件添加
+var xhr = new XMLHttpRequest();
+xhr.open( "post", "http://localhost/up.php", true );
+xhr.send( formData );//发送~~
+
+```
 
 
-####php代码，好像很短。。
+####(2)js调用flash的方法上传,示意如下：
+```js
+ flash.exec( 'appendBlob', "filename", file );//文件添加
+ flash.exec( 'send', {
+                method: "post",
+                url: "http://localhost/up.php"
+            });//发送
+```
+
+####php代码,接收文件
 
 ```php
 
-var_dump($_FILES);
+$in = @fopen($_FILES["file"]["tmp_name"], "rb");
+
+后续省略，保存文件到数据库或者磁盘~~~~
 
 ```
 
 
 ###服务器返回结果
 
+```php
+ 
+die('{"jsonrpc" : "2.0", "error" : {"code": 102, "message": "Failed to open output stream."}, "id" : "id"}');//失败结果
 
-###代码中值得学习的地方，有兴趣可以读源码
+die('{"jsonrpc" : "2.0", "result" : null, "id" : "id"}');//成功结果
 
-####对于html5，和falsh两种实现方式保持统一的接口
+```
+
+ajax收到响应，页面显示上传结果
+
+flash收到响应，调用js的方法，页面显示上传结果
+
+
+####移动端使用webupload的坑（ququ赞助的内容）
+
+####[移动版的坑](https://github.com/fex-team/webuploader/issues/185)
+
+####移动版用这个custom,[webuploader.custom.js](https://github.com/fex-team/webuploader/blob/master/dist/webuploader.custom.js)
+
+####移动设备上，iOS6+，Android4+ 才可以用，根据用户的机型数据，来决定是否用webupload。
+
+####可以WebUploader.Uploader.support()方法，来判断浏览器是否可以使用组件，
+
+####降级方案，使用传统的file表单提交
+
+
+
+###代码中有趣的地方
+
+
+####进度条和缩略图的实现，前端压缩，等。。
+
+
+####对于html5，和falsh两种实现方式，保持统一的接口
+
+
+####在代码运行时自动选择该使用哪种内核
+
 
 ####自定义事件，消息机制，降低耦合
 
+
 ####grunt的使用
 
+
+####有兴趣的同学可以git上down下代码后，推敲一番~~~
 
 ##链接
 
