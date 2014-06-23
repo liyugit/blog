@@ -1,6 +1,6 @@
 ##异步文件上传（百度fex webuploader试用报告）
 
-###为什么选择这个组件，因为在这里，找到了亮点！
+####为什么选择这个组件，因为在这里，找到了亮点！
 
 ### 亮点一，添加文件的多样化
 
@@ -77,39 +77,42 @@ pasteContainer.on("paste",function(e){
 
 ###亮点二，缩略图预览(pc全浏览器实现)
 
-####html5，生成bash64
+####(1)html5，生成bash64
 
 ```js
-canvas.toDataURL();
 
-````
-####flash+php
+img.src = canvas.toDataURL();
+
+```
+####(2)flash+php
+
 
 支持canvas的，用flash代理实现，支持bash64的，多请求一次服务端（php），帮忙处理成解码base64普通图片的url
 
+
 ###亮点三，图片的前端压缩
 
-####canvas缩放
+####(1)canvas缩放
 
 ```js
 drawImage(image, x, y, width, height)
 
 ```
-####jpg图片降低质量,和Photoshop的功能类似
+####(2)jpg图片降低质量,和Photoshop的功能类似
 
 ```js
 
 canvas.toDataURL( type, quality / 100 );
 
 ```
-####flash处理
+####(3)flash处理
 
 省略500字...
 
 
 ###亮点四，分片上传
 
-####file的切分
+####(1)file对象的切分
 
 ```js
 
@@ -118,9 +121,11 @@ file.slice( block.start, block.end );
 ```
 ####flash做切分
 
+
 再次省略500字...
 
-####比较遗憾的他没有实现秒传和断点续传..[https://github.com/fex-team/webuploader/issues/142](https://github.com/fex-team/webuploader/issues/142)
+
+####比较遗憾的他没有实现秒传和断点续传..[原因](https://github.com/fex-team/webuploader/issues/142)
 
 
 ####亮点五，移动端也可以用，不过有坑（ququ赞助的内容）
@@ -137,7 +142,7 @@ file.slice( block.start, block.end );
 
 
 
-###我不是组件的作者，我只是代码的搬运工，有bug可以找原作者（貌似人很好）[webuploader git](https://github.com/fex-team/webuploader)
+###我不是组件的作者，我只是代码的搬运工，有bug可以找原作者（貌似人很好,响应很快！）[webuploader git](https://github.com/fex-team/webuploader)
 
 
 
