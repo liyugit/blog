@@ -142,7 +142,8 @@ file.slice( block.start, block.end );
 
 
 
-###我不是组件的作者，我只是代码的搬运工，有bug可以找原作者（貌似人很好,响应很快！）[webuploader git](https://github.com/fex-team/webuploader)
+
+我不是组件的作者，我只是代码的搬运工，有bug可以找原作者（貌似人很好,响应很快！）[webuploader git](https://github.com/fex-team/webuploader)
 
 
 
