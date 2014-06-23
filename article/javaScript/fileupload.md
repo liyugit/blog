@@ -1,14 +1,8 @@
-##异步文件上传（百度fex webuploader分析）
+##异步文件上传（百度fex webuploader试用报告）
 
-###上传的3个步骤：
+###为什么选择这个组件，因为在这里，找到了亮点！
 
-1.获取文件对象
-
-2.post文件对象到服务器
-
-3.返回上传是否成功
-
-### 文件对象的获取方式
+### 亮点一，添加文件的多样化
 
 
 ####(1)监听file表单的change事件
@@ -80,67 +74,56 @@ pasteContainer.on("paste",function(e){
 });
 ```
 
-####(4)flash文件上传，不支持html5的浏览器的处理方式
 
+###亮点二，缩略图预览(pc全浏览器实现)
 
-flash是业内通用的Uploader.swf，在这个过程中的扮演中转的角色：
+####html5，生成bash64
 
+```js
+canvas.toDataURL();
 
-![Alt flash](https://raw.githubusercontent.com/liyugit/blog/master/article/javaScript/img/js_flash.png)
+````
+####flash+php
 
+支持canvas的，用flash代理实现，支持bash64的，多请求一次服务端（php），帮忙处理成解码base64普通图片的url
 
-###post文件对象到服务器
+###亮点三，图片的前端压缩
 
+####canvas缩放
 
-####(1)formdata + ajax
+```js
+drawImage(image, x, y, width, height)
+
+```
+####jpg图片降低质量,和Photoshop的功能类似
 
 ```js
 
-var formData = new FormData();//定义formdata
-formData.append( "filename", file);//文件添加
-var xhr = new XMLHttpRequest();
-xhr.open( "post", "http://localhost/up.php", true );
-xhr.send( formData );//发送~~
+canvas.toDataURL( type, quality / 100 );
 
 ```
+####flash处理
+
+省略500字...
 
 
-####(2)js调用flash的方法上传,示意如下：
+###亮点四，分片上传
+
+####file的切分
+
 ```js
- flash.exec( 'appendBlob', "filename", file );//文件添加
- flash.exec( 'send', {
-                method: "post",
-                url: "http://localhost/up.php"
-            });//发送
-```
 
-####php代码,接收文件
-
-```php
-
-$in = @fopen($_FILES["file"]["tmp_name"], "rb");
-
-后续省略，保存文件到数据库或者磁盘~~~~
+file.slice( block.start, block.end );
 
 ```
+####flash做切分
+
+再次省略500字...
+
+####比较遗憾的他没有实现秒传和断点续传..[https://github.com/fex-team/webuploader/issues/142](https://github.com/fex-team/webuploader/issues/142)
 
 
-###服务器返回结果
-
-```php
- 
-die('{"jsonrpc" : "2.0", "error" : {"code": 102, "message": "Failed to open output stream."}, "id" : "id"}');//失败结果
-
-die('{"jsonrpc" : "2.0", "result" : null, "id" : "id"}');//成功结果
-
-```
-
-ajax收到响应，页面显示上传结果
-
-flash收到响应，调用js的方法，页面显示上传结果
-
-
-####移动端使用webupload的坑（ququ赞助的内容）
+####亮点五，移动端也可以用，不过有坑（ququ赞助的内容）
 
 ####移动版的坑:[https://github.com/fex-team/webuploader/issues/185](https://github.com/fex-team/webuploader/issues/185)
 
@@ -154,29 +137,11 @@ flash收到响应，调用js的方法，页面显示上传结果
 
 
 
-###代码中有趣的地方
+###我不是组件的作者，我只是代码的搬运工，有bug可以找原作者（貌似人很好）[webuploader git](https://github.com/fex-team/webuploader)
 
 
-####进度条和缩略图的实现，前端压缩，等。。
-
-
-####对于html5，和falsh两种实现方式，保持统一的接口
-
-
-####在代码运行时自动选择该使用哪种内核
-
-
-####自定义事件，消息机制，降低耦合
-
-
-####grunt的使用
-
-
-####有兴趣的同学可以git上down下代码后，推敲一番~~~
 
 ##链接
-
-[gitpress博客用法](http://blog.silverna.org/~posts/gitpress/2013-11-17-gitpress.org%20%E5%9F%BA%E4%BA%8Egithub%E7%9A%84%E6%87%92%E4%BA%BA%E5%8D%9A%E5%AE%A2%E7%B3%BB%E7%BB%9F.md)
 
 [webuploader官网](http://fex.baidu.com/webuploader)
 
