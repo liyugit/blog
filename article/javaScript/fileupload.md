@@ -75,9 +75,9 @@ pasteContainer.on("paste",function(e){
 ```
 
 
-###亮点二，缩略图预览(pc全浏览器实现)
+###亮点二，缩略图预览(pc全浏览器实现，强！)
 
-####(1)html5，生成bash64
+####(1)html5，生成图片bash64
 
 ```js
 
@@ -87,10 +87,12 @@ img.src = canvas.toDataURL();
 ####(2)flash+php
 
 
-支持canvas的，用flash代理实现，支持bash64的，多请求一次服务端（php），帮忙处理成解码base64普通图片的url
+不支持canvas的，用flash代理实现，生成图片base64。
+
+如果再2b一点的浏览器，不支持bash64的，可以多请求一次服务端（比如php），帮忙处理将base64解码成普通图片的url。
 
 
-###亮点三，图片的前端压缩
+###亮点三，图片的前端压缩，是前端做的压缩哦!
 
 ####(1)canvas缩放
 
@@ -107,38 +109,48 @@ canvas.toDataURL( type, quality / 100 );
 ```
 ####(3)flash处理
 
+
 省略500字...
 
 
 ###亮点四，分片上传
 
+
 ####(1)file对象的切分
+
 
 ```js
 
 file.slice( block.start, block.end );
 
 ```
+
 ####flash做切分
 
 
 再次省略500字...
 
 
-####比较遗憾的他没有实现秒传和断点续传..[原因](https://github.com/fex-team/webuploader/issues/142)
+####比较遗憾的是，基于这个file的切分，他没有实现秒传和断点续传..[原因](https://github.com/fex-team/webuploader/issues/142)
 
 
-####亮点五，移动端也可以用，不过有坑（ququ赞助的内容）
+###亮点五，移动端也可以用，不过有坑（ququ赞助的内容）
+
 
 ####移动版的坑:[https://github.com/fex-team/webuploader/issues/185](https://github.com/fex-team/webuploader/issues/185)
 
+
 ####移动版js,[webuploader.custom.js](https://github.com/fex-team/webuploader/blob/master/dist/webuploader.custom.js)
+
 
 ####移动设备上，iOS6+，Android4+ 才可以用，根据用户的机型数据，来决定是否用webupload。
 
-####可以WebUploader.Uploader.support()方法，来判断浏览器是否可以使用组件，
+
+####可以WebUploader.Uploader.support()方法，来判断浏览器是否可以使用组件
+
 
 ####降级方案，使用传统的file表单提交
+
 
 
 
