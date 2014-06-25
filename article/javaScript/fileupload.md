@@ -137,19 +137,19 @@ file.slice( block.start, block.end );
 ###亮点五，移动端也可以用，不过有坑（ququ赞助的内容）
 
 
-####移动版的坑:[https://github.com/fex-team/webuploader/issues/185](https://github.com/fex-team/webuploader/issues/185)
+####(1)移动版的坑:[https://github.com/fex-team/webuploader/issues/185](https://github.com/fex-team/webuploader/issues/185)
 
 
-####移动版js,[webuploader.custom.js](https://github.com/fex-team/webuploader/blob/master/dist/webuploader.custom.js)
+####(2)移动版js,[webuploader.custom.js](https://github.com/fex-team/webuploader/blob/master/dist/webuploader.custom.js)
 
 
-####移动设备上，iOS6+，Android4+ 才可以用，根据用户的机型数据，来决定是否用webupload。
+####(3)移动设备上，iOS6+，Android4+ 才可以用，根据用户的机型数据，来决定是否用webupload。
 
 
-####可以WebUploader.Uploader.support()方法，来判断浏览器是否可以使用组件
+####(4)可以WebUploader.Uploader.support()方法，来判断浏览器是否可以使用组件
 
 
-####降级方案，使用传统的file表单提交
+####(5)最后的降级方案，使用传统的file表单提交
 
 
 
